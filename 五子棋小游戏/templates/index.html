@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>五子棋小游戏</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>五子棋</h1>
+        <div class="mode-select">
+            <button id="pvp-mode" class="mode-btn active">双人对战</button>
+            <button id="pve-mode" class="mode-btn">人机对战</button>
+        </div>
+        <div class="difficulty-select" style="display: none;">
+            <button id="easy" class="diff-btn">简单</button>
+            <button id="medium" class="diff-btn">中等</button>
+            <button id="hard" class="diff-btn">困难</button>
+        </div>
+        <div class="game-info">
+            <div class="timer">对局时间：<span id="time">00:00</span></div>
+            <div class="current-player">当前玩家：<span id="player">等待开始</span></div>
+        </div>
+        <canvas id="board" width="450" height="450"></canvas>
+        <div class="controls">
+            <button id="start">开始游戏</button>
+            <button id="pause" disabled>暂停游戏</button>
+            <button id="surrender" disabled>认输</button>
+            <button id="restart" disabled>重新开始</button>
+        </div>
+        <div class="status" id="status">请选择游戏模式并点击"开始游戏"</div>
+    </div>
+    <script src="{{ url_for('static', filename='js/ai.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html> 

@@ -1,0 +1,107 @@
+.container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+}
+
+#board {
+    background-color: #DEB887;
+    margin: 20px auto;
+    display: block;
+}
+
+.controls {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.status {
+    margin: 10px;
+    padding: 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+.current-player {
+    font-weight: bold;
+}
+
+#player {
+    color: #4CAF50;
+}
+
+.pause-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    display: none;
+}
+
+.mode-select, .difficulty-select {
+    margin: 20px 0;
+}
+
+.mode-btn, .diff-btn {
+    padding: 8px 16px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mode-btn.active {
+    background-color: #2E7D32;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.diff-btn {
+    background-color: #607D8B;
+}
+
+.diff-btn.active {
+    background-color: #455A64;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+#surrender {
+    background-color: #f44336; /* 红色按钮 */
+}
+
+#surrender:disabled {
+    background-color: #cccccc;
+} 
